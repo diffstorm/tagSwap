@@ -1,0 +1,3 @@
+language: "{{LANGUAGE}}"
+class_name: "{{CLASS_NAME}}"
+value: {{CONFIG_VALUE}}

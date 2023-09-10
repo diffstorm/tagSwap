@@ -1,0 +1,46 @@
+{
+    "files": [
+        "test/hw.cs",
+        "test/config.h",
+        "test/main.c",
+        "test/MyClass.java",
+        "test/index.html",
+        "test/myapp.cpp",
+        "test/config.yml"
+    ],
+    "variants": [
+        {
+            "name": "variant1",
+            "replacements": {
+                "{{MAX_USERS}}": "50",
+                "{{LANGUAGE}}": "English",
+                "{{WELCOME_MSG}}": "Hello, User!",
+                "{{HTML_TITLE}}": "My Web Page",
+                "{{CLASS_NAME}}": "MyClass",
+                "{{CONFIG_VALUE}}": "true"
+            }
+        },
+        {
+            "name": "variant2",
+            "replacements": {
+                "{{MAX_USERS}}": "100",
+                "{{LANGUAGE}}": "Turkish",
+                "{{WELCOME_MSG}}": "Merhaba, Kullanıcı!",
+                "{{HTML_TITLE}}": "Web Sayfam",
+                "{{CLASS_NAME}}": "BenimSinifim",
+                "{{CONFIG_VALUE}}": "false"
+            }
+        },
+        {
+            "name": "variant3",
+            "replacements": {
+                "{{MAX_USERS}}": "200",
+                "{{LANGUAGE}}": "Spanish",
+                "{{WELCOME_MSG}}": "Hola, Usuario！",
+                "{{HTML_TITLE}}": "Mi Pagina Web",
+                "{{CLASS_NAME}}": "MiClase",
+                "{{CONFIG_VALUE}}": "null"
+            }
+        }
+    ]
+}
