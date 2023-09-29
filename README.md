@@ -56,6 +56,13 @@ To see a summary of the files and variants specified in config.json, you can use
 python src/tagSwap.py config/config.json summarize
 ```
 
+## Verify Tags and Files
+
+To check existing files and tags in the files, you can use the `verify` option:
+```
+python src/tagSwap.py config/config.json verify
+```
+
 ## Sample Configuration (config.json)
 
 Here's an example config.json file:

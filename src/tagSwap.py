@@ -12,6 +12,7 @@ import json
 import os
 import sys
 import shutil
+from colorama import Fore, Style
 # from charamel import Detector
 
 def log(text):
@@ -84,6 +85,29 @@ def summarize(config):
             log("  Replacements:")
             for tag, value in variant["replacements"].items():
                 log(f"  - {tag}: {value}")
+
+def print_verify_tree(config):
+    """
+    Display a tree structure showing files and their tag status.
+
+    Args:
+        config (dict): The configuration dictionary.
+    """
+    if "files" in config:
+        log("File Tree:")
+        for file in config["files"]:
+            if os.path.exists(file):
+                log(f"{Fore.GREEN}{file}: Exists{Style.RESET_ALL}")
+            else:
+                log(f"{Fore.RED}{file}: Not Found{Style.RESET_ALL}")
+
+            if "variants" in config:
+                for variant in config["variants"]:
+                    for tag in variant["replacements"]:
+                        if tag in open(file).read():
+                            log(f"{Fore.GREEN}  - {tag}: Exists{Style.RESET_ALL}")
+                        else:
+                            log(f"{Fore.RED}  - {tag}: Not Found{Style.RESET_ALL}")
 
 def replace_tags_in_file(filename, replacements):
     """
@@ -212,6 +236,9 @@ def main():
 
     elif action == "summarize":
         summarize(config)
+
+    elif action == "verify":
+        print_verify_tree(config)
 
     else:
         log("Invalid action")
