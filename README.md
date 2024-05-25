@@ -91,6 +91,10 @@ Here's an example config.json file:
 
 You can find sample files in various formats in the `test` directory of this repository.
 
+## :snowman: Author
+
+Eray Öztürk ([@diffstorm](https://github.com/diffstorm))
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
